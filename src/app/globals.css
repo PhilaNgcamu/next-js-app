@@ -23,10 +23,14 @@ a {
   text-decoration: none;
 }
 
-.background-custom-color {
+.custom-background-color {
   background-color: #182237;
 }
 
 .background-color-search-bar {
   background-color: #2e3742;
+}
+
+.custom-text-color {
+  color: #b7bac1;
 }
