@@ -7,7 +7,7 @@ import {
 
 export default function Navbar() {
   return (
-    <div className="flex flex-row justify-between items-center p-7 rounded-xl custom-background-color w-4/5">
+    <div className="flex justify-between items-center p-7 rounded-xl custom-background-color">
       <h1 className="custom-text-color font-bold">Dashboard</h1>
       <div className="flex gap-2.5 p-0 h-11 items-center">
         <div className="flex items-center p-2.5 rounded-xl background-color-search-bar gap-2.5 ">

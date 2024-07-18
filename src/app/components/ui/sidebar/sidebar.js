@@ -78,7 +78,7 @@ const sidebarData = [
 
 export default function Sidebar() {
   return (
-    <div className="h-screen w-[21.1vw] flex flex-col fixed bg-[#182237] p-5">
+    <div className="h-screen flex flex-col container bg-[#182237] p-5">
       <div className="flex items-center mt-5">
         <Image
           src="/noavatar.png"
