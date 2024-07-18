@@ -1,12 +1,85 @@
 import Image from "next/image";
-import Navbar from "./components/ui/navbar/navbar";
 import Link from "next/link";
-import { MdDashboard } from "react-icons/md";
+import {
+  MdDashboard,
+  MdPeople,
+  MdShoppingCart,
+  MdAttachMoney,
+  MdWork,
+  MdAnalytics,
+  MdSettings,
+  MdHelp,
+  MdExitToApp,
+} from "react-icons/md";
+
+const sidebarData = [
+  {
+    section: "Pages",
+    items: [
+      {
+        title: "Dashboard",
+        icon: <MdDashboard className="text-[#b7bac1]" />,
+        href: "/",
+      },
+      {
+        title: "Users",
+        icon: <MdPeople className="text-[#b7bac1]" />,
+        href: "/",
+      },
+      {
+        title: "Products",
+        icon: <MdShoppingCart className="text-[#b7bac1]" />,
+        href: "/",
+      },
+      {
+        title: "Transactions",
+        icon: <MdAttachMoney className="text-[#b7bac1]" />,
+        href: "/",
+      },
+    ],
+  },
+  {
+    section: "Analytics",
+    items: [
+      {
+        title: "Revenue",
+        icon: <MdWork className="text-[#b7bac1]" />,
+        href: "/",
+      },
+      {
+        title: "Reports",
+        icon: <MdAnalytics className="text-[#b7bac1]" />,
+        href: "/",
+      },
+      {
+        title: "Teams",
+        icon: <MdPeople className="text-[#b7bac1]" />,
+        href: "/",
+      },
+    ],
+  },
+  {
+    section: "User",
+    items: [
+      {
+        title: "Settings",
+        icon: <MdSettings className="text-[#b7bac1]" />,
+        href: "/",
+      },
+      { title: "Help", icon: <MdHelp className="text-[#b7bac1]" />, href: "/" },
+      {
+        title: "Logout",
+        icon: <MdExitToApp className="text-[#b7bac1]" />,
+        href: "/",
+      },
+    ],
+  },
+];
 
 export default function Home() {
   return (
     <div className="h-screen w-[21.1vw] flex flex-col fixed bg-[#182237] p-5">
-      <div className="flex mt-5">
+      <div className="flex items-center mt-5">
         <Image
           src="/noavatar.png"
           alt="John Doe"
@@ -16,93 +89,25 @@ export default function Home() {
         />
         <div className="flex flex-col ml-3">
           <span className="text-white">John Doe</span>
-          <span className="text-white">Administrator</span>
+          <span className="text-[#b7bac1] text-sm">Administrator</span>
         </div>
       </div>
-      <ul className="flex flex-col mt-5">
-        <li className="text-[#b7bac1] text-base">Pages</li>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>{" "}
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-      </ul>{" "}
-      <ul className="flex flex-col">
-        <li className="text-[#b7bac1]">Analytics</li>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 transition-duration-300 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-      </ul>{" "}
-      <ul className="flex flex-col">
-        <li className="text-[#b7bac1]">liages</li>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-      </ul>{" "}
-      <ul className="flex flex-col">
-        <li className="text-[#b7bac1]">liages</li>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-        <div className="flex gap-2.5 h-11 items-center hover:bg-gray-700 p-3 rounded-lg">
-          <MdDashboard className="text-white" />
-          <Link href={"/"} className="text-white">
-            Dashboard
-          </Link>
-        </div>
-      </ul>
+      {sidebarData.map((section, index) => (
+        <ul key={index} className="flex flex-col mt-5">
+          <li className="text-[#b7bac1] text-base">{section.section}</li>
+          {section.items.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex gap-2.5 h-18 items-center hover:bg-gray-700 p-5 rounded-lg"
+            >
+              {item.icon}
+              <Link href={item.href} className="text-[#b7bac1]">
+                {item.title}
+              </Link>
+            </div>
+          ))}
+        </ul>
+      ))}
     </div>
   );
 }
