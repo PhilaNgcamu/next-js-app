@@ -19,22 +19,22 @@ const sidebarData = [
       {
         title: "Dashboard",
         icon: <MdDashboard className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Dashboard",
       },
       {
         title: "Users",
         icon: <MdPeople className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Users",
       },
       {
         title: "Products",
         icon: <MdShoppingCart className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Products",
       },
       {
         title: "Transactions",
         icon: <MdAttachMoney className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Transactions",
       },
     ],
   },
@@ -44,17 +44,17 @@ const sidebarData = [
       {
         title: "Revenue",
         icon: <MdWork className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Revenue",
       },
       {
         title: "Reports",
         icon: <MdAnalytics className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Reports",
       },
       {
         title: "Teams",
         icon: <MdPeople className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Teams",
       },
     ],
   },
@@ -64,13 +64,17 @@ const sidebarData = [
       {
         title: "Settings",
         icon: <MdSettings className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Settings",
       },
-      { title: "Help", icon: <MdHelp className="text-[#b7bac1]" />, href: "/" },
+      {
+        title: "Help",
+        icon: <MdHelp className="text-[#b7bac1]" />,
+        href: "/Help",
+      },
       {
         title: "Logout",
         icon: <MdExitToApp className="text-[#b7bac1]" />,
-        href: "/",
+        href: "/Logout",
       },
     ],
   },
