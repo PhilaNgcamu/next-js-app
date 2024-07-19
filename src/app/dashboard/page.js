@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Card from "../components/ui/card/card";
 import Chart from "../components/ui/chart/chart";
 import Transactions from "../components/ui/transactions/transactions";

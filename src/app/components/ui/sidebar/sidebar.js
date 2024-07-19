@@ -1,5 +1,5 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
 import {
   MdDashboard,
   MdPeople,
@@ -11,6 +11,7 @@ import {
   MdHelp,
   MdExitToApp,
 } from "react-icons/md";
+import SidebarItem from "./sideItem";
 
 const sidebarData = [
   {
@@ -19,22 +20,22 @@ const sidebarData = [
       {
         title: "Dashboard",
         icon: <MdDashboard className="text-[#b7bac1]" />,
-        href: "/Dashboard",
+        href: "/dashboard",
       },
       {
         title: "Users",
         icon: <MdPeople className="text-[#b7bac1]" />,
-        href: "/Users",
+        href: "/users",
       },
       {
         title: "Products",
         icon: <MdShoppingCart className="text-[#b7bac1]" />,
-        href: "/Products",
+        href: "/products",
       },
       {
         title: "Transactions",
         icon: <MdAttachMoney className="text-[#b7bac1]" />,
-        href: "/Transactions",
+        href: "/transactions",
       },
     ],
   },
@@ -44,17 +45,17 @@ const sidebarData = [
       {
         title: "Revenue",
         icon: <MdWork className="text-[#b7bac1]" />,
-        href: "/Revenue",
+        href: "/revenue",
       },
       {
         title: "Reports",
         icon: <MdAnalytics className="text-[#b7bac1]" />,
-        href: "/Reports",
+        href: "/reports",
       },
       {
         title: "Teams",
         icon: <MdPeople className="text-[#b7bac1]" />,
-        href: "/Teams",
+        href: "/teams",
       },
     ],
   },
@@ -64,17 +65,17 @@ const sidebarData = [
       {
         title: "Settings",
         icon: <MdSettings className="text-[#b7bac1]" />,
-        href: "/Settings",
+        href: "/settings",
       },
       {
         title: "Help",
         icon: <MdHelp className="text-[#b7bac1]" />,
-        href: "/Help",
+        href: "/help",
       },
       {
         title: "Logout",
         icon: <MdExitToApp className="text-[#b7bac1]" />,
-        href: "/Logout",
+        href: "/logout",
       },
     ],
   },
@@ -100,15 +101,7 @@ export default function Sidebar() {
         <ul key={index} className="flex flex-col mt-5">
           <li className="text-[#b7bac1] text-base">{section.section}</li>
           {section.items.map((item, idx) => (
-            <Link href={item.href} className="text-[#b7bac1]">
-              <div
-                key={idx}
-                className="flex gap-2.5 h-18 items-center hover:bg-gray-700 p-5 rounded-lg"
-              >
-                {item.icon}
-                {item.title}
-              </div>
-            </Link>
+            <SidebarItem key={idx} item={item} />
           ))}
         </ul>
       ))}
