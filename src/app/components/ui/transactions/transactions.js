@@ -1,12 +1,38 @@
 import Image from "next/image";
 
 const transactionsData = [
-  { name: "John Doe", date: "2022-01-01", amount: "$350" },
-  { name: "Jane Smith", date: "2022-02-15", amount: "$450" },
-  { name: "Michael Johnson", date: "2022-03-10", amount: "$250" },
-  { name: "Emily Davis", date: "2022-04-05", amount: "$300" },
-  { name: "Daniel Brown", date: "2022-05-20", amount: "$500" },
+  { name: "John Doe", date: "2022-01-01", amount: "$350", status: "Pending" },
+  {
+    name: "Jane Smith",
+    date: "2022-02-15",
+    amount: "$450",
+    status: "Completed",
+  },
+  {
+    name: "Michael Johnson",
+    date: "2022-03-10",
+    amount: "$250",
+    status: "Cancelled",
+  },
+  {
+    name: "Emily Davis",
+    date: "2022-04-05",
+    amount: "$300",
+    status: "Pending",
+  },
+  {
+    name: "Daniel Brown",
+    date: "2022-05-20",
+    amount: "$500",
+    status: "Completed",
+  },
 ];
+
+const statusColors = {
+  Pending: "bg-[#8c7000]",
+  Completed: "bg-[#008a00]",
+  Cancelled: "bg-[#de0000]",
+};
 
 export default function Transactions() {
   return (
@@ -34,8 +60,12 @@ export default function Transactions() {
                 <span className="ml-3 text-white">{transaction.name}</span>
               </td>
               <td className="px-4 py-2">
-                <span className="p-1 text-white rounded-lg bg-[#f7cb7375]">
-                  Pending
+                <span
+                  className={`p-[4.5px] text-sm text-white rounded-lg ${
+                    statusColors[transaction.status]
+                  }`}
+                >
+                  {transaction.status}
                 </span>
               </td>
               <td className="text-white px-4 py-2">{transaction.date}</td>
