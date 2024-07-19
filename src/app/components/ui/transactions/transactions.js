@@ -1,4 +1,4 @@
-import TransactionRow from "./TransactionRow";
+import TransactionRow from "./transactionRow";
 
 const transactionsData = [
   { name: "John Doe", date: "2022-01-01", amount: "$350", status: "Pending" },
