@@ -49,9 +49,9 @@ export default function Chart() {
     },
   ];
   return (
-    <div className="container h-[500px] mt-10 bg-[#182237] p-5 rounded-xl">
+    <div className="container h-[450px] mt-10 bg-[#182237] p-4 rounded-xl">
       <h2 className="text-[#b7bac1] p-5">Weekly Recap</h2>
-      <ResponsiveContainer width="100%" height="85%">
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
           height={300}
