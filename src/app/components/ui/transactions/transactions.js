@@ -1,4 +1,4 @@
-import Image from "next/image";
+import TransactionRow from "./TransactionRow";
 
 const transactionsData = [
   { name: "John Doe", date: "2022-01-01", amount: "$350", status: "Pending" },
@@ -12,7 +12,7 @@ const transactionsData = [
     name: "Michael Johnson",
     date: "2022-03-10",
     amount: "$250",
-    status: "Cancelled",
+    status: "Failed",
   },
   {
     name: "Emily Davis",
@@ -28,12 +28,6 @@ const transactionsData = [
   },
 ];
 
-const statusColors = {
-  Pending: "bg-[#8c7000]",
-  Completed: "bg-[#008a00]",
-  Cancelled: "bg-[#de0000]",
-};
-
 export default function Transactions() {
   return (
     <div className="mt-10 bg-[#182237] p-5 rounded-xl">
@@ -48,29 +42,7 @@ export default function Transactions() {
         </thead>
         <tbody>
           {transactionsData.map((transaction, index) => (
-            <tr key={index}>
-              <td className="flex items-center px-4 py-2">
-                <Image
-                  src="/noavatar.png"
-                  alt={transaction.name}
-                  width={30}
-                  height={30}
-                  className="rounded-full"
-                />
-                <span className="ml-3 text-white">{transaction.name}</span>
-              </td>
-              <td className="px-4 py-2">
-                <span
-                  className={`p-[4.5px] text-sm text-white rounded-lg ${
-                    statusColors[transaction.status]
-                  }`}
-                >
-                  {transaction.status}
-                </span>
-              </td>
-              <td className="text-white px-4 py-2">{transaction.date}</td>
-              <td className="text-white px-4 py-2">{transaction.amount}</td>
-            </tr>
+            <TransactionRow key={index} transaction={transaction} />
           ))}
         </tbody>
       </table>
