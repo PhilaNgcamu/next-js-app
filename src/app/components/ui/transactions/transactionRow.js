@@ -3,7 +3,7 @@ import Image from "next/image";
 const statusColors = {
   Pending: "bg-[#968B24]",
   Completed: "bg-[#006600]",
-  Failed: "bg-[#990000]",
+  Cancelled: "bg-[#990000]",
 };
 
 export default function TransactionRow({ transaction }) {

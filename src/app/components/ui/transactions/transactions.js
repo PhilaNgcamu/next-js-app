@@ -12,7 +12,7 @@ const transactionsData = [
     name: "Michael Johnson",
     date: "2022-03-10",
     amount: "$250",
-    status: "Failed",
+    status: "Cancelled",
   },
   {
     name: "Emily Davis",
