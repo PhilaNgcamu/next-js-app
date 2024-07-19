@@ -96,15 +96,15 @@ export default function Sidebar() {
         <ul key={index} className="flex flex-col mt-5">
           <li className="text-[#b7bac1] text-base">{section.section}</li>
           {section.items.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex gap-2.5 h-18 items-center hover:bg-gray-700 p-5 rounded-lg"
-            >
-              {item.icon}
-              <Link href={item.href} className="text-[#b7bac1]">
+            <Link href={item.href} className="text-[#b7bac1]">
+              <div
+                key={idx}
+                className="flex gap-2.5 h-18 items-center hover:bg-gray-700 p-5 rounded-lg"
+              >
+                {item.icon}
                 {item.title}
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </ul>
       ))}
