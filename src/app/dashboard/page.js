@@ -18,7 +18,8 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="w-1/4">
-        <Rightbar />
+        <Rightbar marginTop="mt-8" />
+        <Rightbar marginTop="mt-[440px]" />
       </div>
     </div>
   );
