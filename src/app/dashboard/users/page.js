@@ -135,10 +135,14 @@ export default function Users() {
               <td className="text-white px-4 py-2">{user.role}</td>
               <td className="text-white px-4 py-2">{user.status}</td>
               <td className="text-white px-4 py-2 bg-blue-500">
-                <Link href={`/dashboard/users/${user.id}`}>
-                  <button className="bg-teal-500 p-[10px] rounded-lg">
-                    View
-                  </button>
+                <Link
+                  href={{
+                    pathname: `/dashboard/users/${user.id}`,
+                    query: user,
+                  }}
+                  className="bg-teal-500 p-[10px] rounded-lg"
+                >
+                  View
                 </Link>
                 <button className="ml-5 p-[10px] bg-red-500 rounded-lg">
                   Delete
