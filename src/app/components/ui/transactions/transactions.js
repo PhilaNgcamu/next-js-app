@@ -9,19 +9,19 @@ const transactionsData = [
     status: "Completed",
   },
   {
-    name: "Michael Johnson",
+    name: "Alice Johnson",
     date: "2022-03-10",
     amount: "$250",
     status: "Cancelled",
   },
   {
-    name: "Emily Davis",
+    name: "Hannah Lee",
     date: "2022-04-05",
     amount: "$300",
     status: "Pending",
   },
   {
-    name: "Daniel Brown",
+    name: "Bob Brown",
     date: "2022-05-20",
     amount: "$500",
     status: "Completed",

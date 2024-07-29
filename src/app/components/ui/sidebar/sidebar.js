@@ -25,17 +25,17 @@ const sidebarData = [
       {
         title: "Users",
         icon: <MdPeople className="text-[#b7bac1]" />,
-        href: "/users",
+        href: "/dashboard/users",
       },
       {
         title: "Products",
         icon: <MdShoppingCart className="text-[#b7bac1]" />,
-        href: "/products",
+        href: "/dashboard/products",
       },
       {
         title: "Transactions",
         icon: <MdAttachMoney className="text-[#b7bac1]" />,
-        href: "/transactions",
+        href: "/dashboard/transactions",
       },
     ],
   },
@@ -45,17 +45,17 @@ const sidebarData = [
       {
         title: "Revenue",
         icon: <MdWork className="text-[#b7bac1]" />,
-        href: "/revenue",
+        href: "/dashboard/revenue",
       },
       {
         title: "Reports",
         icon: <MdAnalytics className="text-[#b7bac1]" />,
-        href: "/reports",
+        href: "/dashboard/reports",
       },
       {
         title: "Teams",
         icon: <MdPeople className="text-[#b7bac1]" />,
-        href: "/teams",
+        href: "/dashboard/teams",
       },
     ],
   },
@@ -65,17 +65,17 @@ const sidebarData = [
       {
         title: "Settings",
         icon: <MdSettings className="text-[#b7bac1]" />,
-        href: "/settings",
+        href: "/dashboard/settings",
       },
       {
         title: "Help",
         icon: <MdHelp className="text-[#b7bac1]" />,
-        href: "/help",
+        href: "/dashboard/help",
       },
       {
         title: "Logout",
         icon: <MdExitToApp className="text-[#b7bac1]" />,
-        href: "/logout",
+        href: "/dashboard/logout",
       },
     ],
   },
