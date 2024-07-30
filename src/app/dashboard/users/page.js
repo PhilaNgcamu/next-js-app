@@ -98,13 +98,21 @@ const users = [
 export default function Users() {
   return (
     <div className="flex flex-col items-start p-7 rounded-xl bg-yellow-600">
-      <div className="flex items-center bg-[#2e3742] p-2.5 rounded-xl">
-        <MdSearch className="text-white" />
-        <input
-          type="text"
-          placeholder="Search..."
-          className="bg-transparent outline-none border-0 text-white ml-1"
-        />
+      <div className="flex justify-between items-center bg-green-500 w-full ">
+        <div className="flex items-center bg-[#2e3742] p-2.5 rounded-lg">
+          <MdSearch className="text-white" />
+          <input
+            type="text"
+            placeholder="Search for a user..."
+            className="bg-transparent outline-none border-0 text-white ml-1"
+          />
+        </div>
+        <Link
+          href="/dashboard/users/add_new_user"
+          className="text-white bg-[#5d57c9] p-2.5 rounded-lg"
+        >
+          Add New
+        </Link>
       </div>
       <table className="bg-red-600 w-full">
         <thead>
